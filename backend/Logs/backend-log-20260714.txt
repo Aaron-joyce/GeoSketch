@@ -1,0 +1,33 @@
+[2026-07-14 13:09:49.299 +05:30] [INF] Starting web application host
+[2026-07-14 13:09:51.271 +05:30] [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+[2026-07-14 13:09:51.335 +05:30] [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+[2026-07-14 13:09:51.367 +05:30] [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-07-14 07:39:51.3515551+00:00');
+SELECT changes();
+[2026-07-14 13:09:51.520 +05:30] [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+[2026-07-14 13:09:51.533 +05:30] [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+[2026-07-14 13:09:51.539 +05:30] [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-14 13:09:51.555 +05:30] [INF] No migrations were applied. The database is already up to date.
+[2026-07-14 13:09:51.558 +05:30] [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+[2026-07-14 13:09:51.689 +05:30] [INF] User profile is available. Using '/home/admin/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2026-07-14 13:09:51.875 +05:30] [INF] Now listening on: http://localhost:5080
+[2026-07-14 13:09:51.879 +05:30] [INF] Application started. Press Ctrl+C to shut down.
+[2026-07-14 13:09:51.880 +05:30] [INF] Hosting environment: Development
+[2026-07-14 13:09:51.880 +05:30] [INF] Content root path: /home/admin/prgms/GeoSketch/backend
+[2026-07-14 13:09:52.247 +05:30] [INF] Request starting HTTP/1.1 GET http://localhost:5080/ - null null
+[2026-07-14 13:09:52.288 +05:30] [WRN] Failed to determine the https port for redirect.
+[2026-07-14 13:09:52.344 +05:30] [INF] Executing endpoint 'HTTP: GET /'
+[2026-07-14 13:09:52.353 +05:30] [INF] Setting HTTP status code 200.
+[2026-07-14 13:09:52.354 +05:30] [INF] Writing value of type 'String' as Json.
+[2026-07-14 13:09:52.363 +05:30] [INF] Executed endpoint 'HTTP: GET /'
+[2026-07-14 13:09:52.366 +05:30] [INF] Request finished HTTP/1.1 GET http://localhost:5080/ - 200 null application/json; charset=utf-8 122.597ms

@@ -44,7 +44,7 @@ export default function App() {
             </svg>
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-wide text-stone-100">Project App</h1>
+            <h1 className="text-xl font-bold tracking-wide text-stone-100">GeoSketch</h1>
           </div>
         </div>
 

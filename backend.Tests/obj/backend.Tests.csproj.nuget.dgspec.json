@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/admin/prgms/project-app/backend.Tests/backend.Tests.csproj": {}
+    "/home/admin/prgms/GeoSketch/backend.Tests/backend.Tests.csproj": {}
   },
   "projects": {
-    "/home/admin/prgms/project-app/backend.Tests/backend.Tests.csproj": {
+    "/home/admin/prgms/GeoSketch/backend.Tests/backend.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/admin/prgms/project-app/backend.Tests/backend.Tests.csproj",
+        "projectUniqueName": "/home/admin/prgms/GeoSketch/backend.Tests/backend.Tests.csproj",
         "projectName": "backend.Tests",
-        "projectPath": "/home/admin/prgms/project-app/backend.Tests/backend.Tests.csproj",
+        "projectPath": "/home/admin/prgms/GeoSketch/backend.Tests/backend.Tests.csproj",
         "packagesPath": "/home/admin/.nuget/packages/",
-        "outputPath": "/home/admin/prgms/project-app/backend.Tests/obj/",
+        "outputPath": "/home/admin/prgms/GeoSketch/backend.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/admin/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/admin/prgms/project-app/backend/backend.csproj": {
-                "projectPath": "/home/admin/prgms/project-app/backend/backend.csproj"
+              "/home/admin/prgms/GeoSketch/backend/backend.csproj": {
+                "projectPath": "/home/admin/prgms/GeoSketch/backend/backend.csproj"
               }
             }
           }
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.109/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -364,14 +364,14 @@
         }
       }
     },
-    "/home/admin/prgms/project-app/backend/backend.csproj": {
+    "/home/admin/prgms/GeoSketch/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/admin/prgms/project-app/backend/backend.csproj",
+        "projectUniqueName": "/home/admin/prgms/GeoSketch/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "/home/admin/prgms/project-app/backend/backend.csproj",
+        "projectPath": "/home/admin/prgms/GeoSketch/backend/backend.csproj",
         "packagesPath": "/home/admin/.nuget/packages/",
-        "outputPath": "/home/admin/prgms/project-app/backend/obj/",
+        "outputPath": "/home/admin/prgms/GeoSketch/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/admin/.nuget/NuGet/NuGet.Config"
@@ -455,7 +455,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.109/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

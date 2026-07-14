@@ -74,7 +74,23 @@ try
     {
         options.AddPolicy("AllowFrontend", policy =>
         {
-            policy.WithOrigins("http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000")
+            var allowedOrigins = new List<string>
+            {
+                "http://localhost:5173",
+                "http://127.0.0.1:5173",
+                "http://localhost:3000",
+                "https://mango-coast-09c5d4500.azurestaticapps.net",
+                "https://mango-coast-09c5d4500.7.azurestaticapps.net"
+            };
+
+            var configuredOrigins = builder.Configuration["Cors:AllowedOrigins"];
+            if (!string.IsNullOrEmpty(configuredOrigins))
+            {
+                var origins = configuredOrigins.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+                allowedOrigins.AddRange(origins);
+            }
+
+            policy.WithOrigins(allowedOrigins.ToArray())
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
@@ -106,8 +122,14 @@ try
 
     app.UseHttpsRedirection();
 
-    app.UseDefaultFiles();
-    app.UseStaticFiles();
+    // Only serve static files if the wwwroot directory exists
+    var wwwrootPath = Path.Combine(builder.Environment.ContentRootPath, "wwwroot");
+    var hasWwwroot = Directory.Exists(wwwrootPath);
+    if (hasWwwroot)
+    {
+        app.UseDefaultFiles();
+        app.UseStaticFiles();
+    }
 
     // Enable CORS
     app.UseCors("AllowFrontend");
@@ -116,9 +138,16 @@ try
     app.UseAuthentication();
     app.UseAuthorization();
 
+    // Map health check / root route to prevent 404 startup probes
+    app.MapGet("/", () => Results.Ok("GeoSketch API is running."));
+
     // Map Controller routes
     app.MapControllers();
-    app.MapFallbackToFile("index.html");
+
+    if (hasWwwroot)
+    {
+        app.MapFallbackToFile("index.html");
+    }
 
     app.Run();
 }

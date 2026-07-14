@@ -95,7 +95,7 @@ Make sure you have the following installed on your machine:
 
 ## 🚀 Running the Application
 
-### Method A: Running Locally (Recommended)
+### Running Locally (Recommended)
 
 1.  **Restore and Run the Backend:**
     ```bash
@@ -124,23 +124,6 @@ Make sure you have the following installed on your machine:
 
 ---
 
-### Method B: Running with Docker Compose
-
-Ensure Docker is running, then run the following command from the root directory:
-```bash
-docker compose up --build -d
-```
-*   **Frontend:** Serves on `http://localhost:3000` (via Nginx).
-*   **Backend API:** Exposes endpoints at `http://localhost:5000/api/person`.
-*   **Persistence:** Registration data is saved in a persistent Docker volume named `sqlite-data`.
-
-To stop the containers:
-```bash
-docker compose down
-```
-
----
-
 ## 📄 API Contracts
 
 | Method | Endpoint | Description | Payload Structure | Expected HTTP Status |
@@ -163,5 +146,5 @@ docker compose down
 ## ⏱️ Development Metrics
 
 *   **Estimated Assessment Duration:** ~4 Hours
-*   **Actual Development Time:** ~3.5 Hours (including database normalization, service layering, toast UX improvements, file logging, and Docker configs)
+*   **Actual Development Time:** ~3.5 Hours (including database normalization, service layering, toast UX improvements, file logging, etc.)
 *   **Status:** 100% Complete, builds successfully, fully operational locally and in containerized states.
