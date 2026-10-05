@@ -26,7 +26,10 @@ jobs:
 
       - name: Build Project
         run: dotnet build backend/backend.csproj -c Release --no-restore
-
+      
+      - name: Run Backend Tests
+        run: dotnet test backend.Tests/backend.Tests.csproj -c Release
+      
       - name: Publish Project
         run: dotnet publish backend/backend.csproj -c Release -o ./publish --no-build
 
