@@ -9,7 +9,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile && bun test
+        working-directory: frontend
+        
   build-and-deploy:
+    needs: test_job
     runs-on: ubuntu-latest
 
     steps:
